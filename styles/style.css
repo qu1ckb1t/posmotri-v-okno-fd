@@ -38,6 +38,19 @@ ol {
   list-style: none;
 }
 
+/* Кастомный скроллбар */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+}
+
 .content {
   border: 1px solid white;
   display: flex;
@@ -67,6 +80,16 @@ ol {
   align-items: flex-start;
 }
 
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-bottom: 5px;
+}
+
 .content__details {
   border: 1px solid white;
   width: 100%;
@@ -76,9 +99,24 @@ ol {
   gap: 26px;
 }
 
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 75px;
+  line-height: 94%;
+  letter-spacing: 0%;
+  text-transform: uppercase;  
+}
+
+.content__accent {
+  color: gray;
+}
+
 .content__list-container {
   height: 298px;
   overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -88,6 +126,11 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: white;
 }
 
 .content__video-card {
@@ -106,39 +149,28 @@ ol {
   flex-grow: 1;
 }
 
-/* Кастомный скроллбар */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgb(217 217 217 / 10%);
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
-}
-
-.search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 18px;
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
   line-height: 100%;
   letter-spacing: 0%;
-  padding-bottom: 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 196px;
 }
 
-.title {
-  font-family: Oswald;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 75px;
-  line-height: 94%;
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(16.2px + 6px);
   letter-spacing: 0%;
-  text-transform: uppercase;  
-}
-
-.content__accent {
-  color: gray;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
