@@ -61,6 +61,7 @@ ol {
 }
 
 .result__video-container {
+  position: relative;
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
@@ -183,6 +184,7 @@ ol {
 }
 
 .content__list-container {
+  position: relative;
   height: 298px;
   overflow: auto;
   display: flex;
